@@ -126,6 +126,18 @@ body {
     }
 }
 
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100px); // put the element to the bottom 100px of the time of start
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0); // set to origin posiion
+    }
+}
+
 
 .btn:link, .btn:visited /* after clicked - purple by default */ {
     text-transform: uppercase;
@@ -137,6 +149,8 @@ body {
     transition: all .2s; /* make transform from hover and acitive state (and more) more smooth */
 
     position: relative; /* reference of position relative of .btn::after */
+
+    animation: moveInBottom 1s ease-out;
 }
 
 .btn:hover {
