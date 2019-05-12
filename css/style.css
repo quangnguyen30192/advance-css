@@ -60,6 +60,13 @@ body {
     font-size: 60px;
     font-weight: 700;
     letter-spacing: 35px;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in; // support better animation - make slower animation
+
+    /*animation-iteration-count: 3;*/
+    /*animation-delay: 3s;*/
 }
 
 .heading-primary-sub {
@@ -67,4 +74,20 @@ body {
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 17.4px;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px); // put the element to the left 100px of the time of start
+    }
+
+    80% {
+        transform: translateX(20px); // put the element to the right 20px 20% of the time finished
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0); // set to origin posiion
+    }
 }
