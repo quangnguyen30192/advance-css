@@ -61,7 +61,7 @@ body {
     color: #fff;
     text-transform: uppercase;
 
-    backface-visibility: hidden; // prevent the heading text move up a little bit when animation finished because its parent
+    backface-visibility: hidden; /* prevent the heading text move up a little bit when animation finished because its parent */
 }
 
 .heading-primary-main {
@@ -72,9 +72,9 @@ body {
 
     animation-name: moveInLeft;
     animation-duration: 1s;
-    animation-timing-function: ease-in; // support better animation - make slower animation
+    animation-timing-function: ease-in; /* support better animation - make slower animation */
 
-    // shorthand:     animation: moveInLeft 1s ease-in;
+    /* shorthand:     animation: moveInLeft 1s ease-in; */
     /*animation-iteration-count: 3;*/
     /*animation-delay: 3s;*/
     /*animation-fill-mode: backwards;*/
@@ -94,7 +94,7 @@ body {
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px); //rotate(30deg); // put the element to the left 100px of the time of start
+        transform: translateX(-100px); /* rotate(30deg); put the element to the left 100px of the time of start */
     }
 
     /*60% {*/
@@ -102,40 +102,40 @@ body {
     /*}*/
 
     80% {
-        transform: translateX(10px); // put the element to the right 20px 20% of the time finished
+        transform: translateX(10px); /* put the element to the right 20px 20% of the time finished */
     }
 
     100% {
         opacity: 1;
-        transform: translateX(0); // set to origin posiion
+        transform: translateX(0); /* set to origin posiion */
     }
 }
 
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px); // put the element to the right 100px of the time of start
+        transform: translateX(100px); /* put the element to the right 100px of the time of start */
     }
 
     80% {
-        transform: translateX(-10px); // put the element to the left 20px before the time finished 20%
+        transform: translateX(-10px); /* put the element to the left 20px before the time finished 20% */
     }
 
     100% {
         opacity: 1;
-        transform: translateX(0); // set to origin posiion
+        transform: translateX(0); /* set to origin position */
     }
 }
 
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(100px); // put the element to the bottom 100px of the time of start
+        transform: translateY(100px); /* put the element to the bottom 100px of the time of start */
     }
 
     100% {
         opacity: 1;
-        transform: translateX(0); // set to origin posiion
+        transform: translateX(0); /* set to origin position */
     }
 }
 
