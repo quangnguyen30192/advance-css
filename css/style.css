@@ -42,6 +42,9 @@ body {
     height: 35px;
 }
 
+/*.logo:hover {*/
+/*    animation: moveInRight 1s ease-in;*/
+/*}*/
 
 .text-box {
     position: absolute;
@@ -84,8 +87,12 @@ body {
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px); // put the element to the left 100px of the time of start
+        transform: translateX(-100px); //rotate(30deg); // put the element to the left 100px of the time of start
     }
+
+    /*60% {*/
+    /*    transform: rotate(180deg);*/
+    /*}*/
 
     80% {
         transform: translateX(10px); // put the element to the right 20px 20% of the time finished
