@@ -134,7 +134,9 @@ body {
     display: inline-block; /*prevent the button not to stick to heading sub*/
     border-radius: 100px;
 
-    transition: all .2s; // make transform from hover and acitive state (and more) more smooth
+    transition: all .2s; /* make transform from hover and acitive state (and more) more smooth */
+
+    position: relative; /* reference of position relative of .btn::after */
 }
 
 .btn:hover {
@@ -153,4 +155,32 @@ body {
 .btn-white {
     background-color: #fff;
     color: #777;
+}
+
+.btn::after /* insert the box content */{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+
+    position: absolute; /* make the height and width of the box content equal to the btn */
+
+    /* make the box content laid out - override the btn*/
+    top: 0;
+    left: 0;
+
+    z-index: -1; /* hide the box content after the btn */
+    transition: all .4s;
+}
+
+/* make btn-white consistency to btn with white background color after btn::after*/
+.btn-white::after {
+    background-color: #fff;
+}
+
+/* animation: make the box content of btn display but fade out (opacity: 0) */
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
 }
