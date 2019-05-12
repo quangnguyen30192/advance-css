@@ -5,6 +5,8 @@ Light green: #7ed56f
 Medium green: #55c57a
 Dark green: #28b485
 
+X direction: from left to right
+Y direction: from top to bottom
 */
 
 * {
@@ -125,11 +127,27 @@ body {
 }
 
 
-.btn:link, .btn:visited {
+.btn:link, .btn:visited /* after clicked - purple by default */ {
     text-transform: uppercase;
     text-decoration: none;
     padding: 15px 40px;
-    display: inline-block; // prevent the button not to stick to heading sub
+    display: inline-block; /*prevent the button not to stick to heading sub*/
+    border-radius: 100px;
+
+    transition: all .2s; // make transform from hover and acitive state (and more) more smooth
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 /* shadow for X direction */
+                10px /* shadow for Y direction */
+                20px /* blur */
+                rgba(0, 0, 0, 0.2) /* make it more transparently fro, black*/;
+}
+
+.btn:active /* when clicked */ {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* make the shadow behaves naturally once clicked */
 }
 
 .btn-white {
