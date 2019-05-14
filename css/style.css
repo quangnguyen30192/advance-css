@@ -9,24 +9,32 @@ X direction: from left to right
 Y direction: from top to bottom
 */
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
     font-family: "Lato";
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+
+    box-sizing: border-box;
 }
 
 .header {
     height: 95vh;
-    background-image: linear-gradient(to right bottom, rgb(126, 213, 111, 0.8), rgb(85, 197, 122, 0.8)), url("../img/hero.jpg");
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgb(85, 197, 122, 0.8)), url("../img/hero.jpg");
     background-size: cover;
     background-position: top;
     position: relative;
@@ -36,12 +44,12 @@ body {
 
 .logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo {
-    height: 35px;
+    height: 3.5rem;
 }
 
 /*.logo:hover {*/
@@ -66,9 +74,9 @@ body {
 
 .heading-primary-main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 700;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
 
     animation-name: moveInLeft;
     animation-duration: 1s;
@@ -82,19 +90,19 @@ body {
 
 .heading-primary-sub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 400;
-    letter-spacing: 17.4px;
+    letter-spacing: 1.74rem;
 
     animation: moveInRight 1s ease-in;
 
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px); /* rotate(30deg); put the element to the left 100px of the time of start */
+        transform: translateX(-10rem); /* rotate(30deg); put the element to the left 100px of the time of start */
     }
 
     /*60% {*/
@@ -102,7 +110,7 @@ body {
     /*}*/
 
     80% {
-        transform: translateX(10px); /* put the element to the right 20px 20% of the time finished */
+        transform: translateX(1rem); /* put the element to the right 20px 20% of the time finished */
     }
 
     100% {
@@ -114,11 +122,11 @@ body {
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px); /* put the element to the right 100px of the time of start */
+        transform: translateX(10rem); /* put the element to the right 100px of the time of start */
     }
 
     80% {
-        transform: translateX(-10px); /* put the element to the left 20px before the time finished 20% */
+        transform: translateX(-1rem); /* put the element to the left 20px before the time finished 20% */
     }
 
     100% {
@@ -130,7 +138,7 @@ body {
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(100px); /* put the element to the bottom 100px of the time of start */
+        transform: translateY(10rem); /* put the element to the bottom 100px of the time of start */
     }
 
     100% {
@@ -143,9 +151,9 @@ body {
 .btn:link, .btn:visited /* after clicked - purple by default */ {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block; /*prevent the button not to stick to heading sub*/
-    border-radius: 100px;
+    border-radius: 10rem;
 
     transition: all .2s; /* make transform from hover and acitive state (and more) more smooth */
 
@@ -153,16 +161,16 @@ body {
 }
 
 .btn:hover {
-    transform: translateY(-4px);
+    transform: translateY(-0.4rem);
     box-shadow: 0 /* shadow for X direction */
-                10px /* shadow for Y direction */
-                20px /* blur */
+                1rem /* shadow for Y direction */
+                2rem /* blur */
                 rgba(0, 0, 0, 0.2) /* make it more transparently fro, black*/;
 }
 
 .btn:active /* when clicked */ {
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* make the shadow behaves naturally once clicked */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* make the shadow behaves naturally once clicked */
 }
 
 .btn-white {
@@ -175,7 +183,7 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
 
     position: absolute; /* make the height and width of the box content equal to the btn */
 
